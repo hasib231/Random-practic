@@ -1,2 +1,2 @@
-# Random-practic
+# Random-practice
 This is my random practice problem
