@@ -1,3 +1,7 @@
+//Get all prime number until n
+//O(n(sqrt(n)))
+
+
 #include<bits/stdc++.h>
 
 using namespace std;
