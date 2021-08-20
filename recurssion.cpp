@@ -1,4 +1,4 @@
-//no 1
+//sum all n
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -23,7 +23,7 @@ int main()
     cout<<sum;
 }
 
-//no 2
+//m to n sum
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -47,3 +47,29 @@ int main()
     sum=printNumber(m,n);
     cout<<sum;
 }
+
+//factorial
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int printNumber(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    return n*printNumber(n-1);
+
+}
+
+
+int main()
+{
+    int n,m,sum;
+    cin>>n;
+    cout<<endl;
+    sum=printNumber(n);
+    cout<<sum;
+}
+
