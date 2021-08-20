@@ -99,3 +99,30 @@ int main()
     cout<<ans;
 }
 
+//find pow(n,m)
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int printNumber(int n,int m)
+{
+    if(m==0)
+    {
+        return 1;
+    }
+    int result=n*printNumber(n,m-1);
+    cout<<"n="<<n<<" m="<<m<<" result="<<result<<endl;
+    return result;
+
+}
+
+
+int main()
+{
+    int n,m,ans;
+    cin>>n>>m;
+    cout<<endl;
+    ans=printNumber(n,m);
+    cout<<ans;
+}
+
