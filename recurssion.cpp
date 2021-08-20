@@ -73,3 +73,29 @@ int main()
     cout<<sum;
 }
 
+//GCD
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int printNumber(int n,int m)
+{
+    cout<<"n="<<n<<" m="<<m<<" n%m="<<n%m<<endl;
+    if(n%m==0)
+    {
+        return m;
+    }
+    return printNumber(m,n%m);
+
+}
+
+
+int main()
+{
+    int n,m,ans;
+    cin>>n>>m;
+    cout<<endl;
+    ans=printNumber(n,m);
+    cout<<ans;
+}
+
