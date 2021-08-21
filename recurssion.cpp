@@ -126,3 +126,34 @@ int main()
     cout<<ans;
 }
 
+//sum of numbers
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int printNumber(int n)
+{
+    if(n==0)
+    {
+        return 0;
+    }
+    cout<<"n="<<n<<endl;
+    int rem=n%10;
+    int m=printNumber(n/10);
+    int result=rem+m;
+    cout<<"n="<<n<<" rem="<<rem<<" result="<<result<<endl;
+    return result;
+    //return n%10+printNumber(n/10);
+
+}
+
+
+int main()
+{
+    int n,m,ans;
+    cin>>n;
+    cout<<endl;
+    ans=printNumber(n);
+    cout<<ans;
+}
+
