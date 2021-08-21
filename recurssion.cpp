@@ -181,3 +181,34 @@ int main()
 
 }
 
+//reverse array
+#include<bits/stdc++.h>
+
+using namespace std;
+
+void printNumber(int ara[],int first,int last)
+{
+    if(first>last)
+    {
+        return;
+    }
+    int temp=ara[first];
+    ara[first]=ara[last];
+    ara[last]=temp;
+
+    printNumber(ara,first+1,last-1);
+}
+
+int main()
+{
+    int n,m,ans;
+    int ara[]={1,3,5,7,8,9};
+    n=sizeof(ara)/sizeof(ara[0]);
+    printNumber(ara,0,n-1);
+    for(int i=0;i<n;i++)
+    {
+        cout<<ara[i]<<" ";
+    }
+}
+
+
