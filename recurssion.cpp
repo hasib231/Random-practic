@@ -157,3 +157,27 @@ int main()
     cout<<ans;
 }
 
+//sum of array element
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int printNumber(int ara[],int len)
+{
+    if(len<0)
+    {
+        return 0;
+    }
+    return ara[len]+printNumber(ara,len-1);
+}
+
+int main()
+{
+    int n,m,ans;
+    int ara[]={1,3,5,7,8,9};
+    n=sizeof(ara)/sizeof(ara[0]);
+    ans=printNumber(ara,n-1);
+    cout<<ans<<endl;
+
+}
+
