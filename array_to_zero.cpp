@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int n,x,i,j=0,ct=0;
+    int n,x,i,j=0,ct=0,stop=0,test=1;
     cin>>n>>x;
     int ara[n];
 
@@ -12,33 +12,33 @@ int main()
     {
         ara[i]=i+1;
     }
-
-    while(ara[j]!=0)
+    while(1)
     {
-        if(ct==n)
+        if(stop==n)
         {
             break;
         }
-        ara[j]=0;
-        for(i=0;i<n;i++)
+        if(ara[j]!=0)
         {
-        cout<<ara[i]<<" ";
+            ct++;
         }
-        cout<<endl;
-        ct++;
-
-        j=j+x;
-        if(j>n-1)
+        if(ct==x)
         {
-            j=0;
-            while(ara[j]==0)
+            ct=0;
+            ara[j]=0;
+            for(i=0;i<n;i++)
             {
-                j++;
-                if(ara[j]!=0)
-                    break;
+            cout<<ara[i]<<" ";
             }
+            cout<<"test="<<test;
+            cout<<endl;
+            stop++;
         }
+
+        j++;
+        j=j%n;
+
+        test++;
     }
-
-
 }
+
