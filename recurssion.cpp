@@ -274,5 +274,33 @@ int main()
 
 }
 
+//permutation of string
+#include<bits/stdc++.h>
+#define swapp(a,b) {char t=a;a=b;b=t;}
+using namespace std;
+
+char str[100];
+void permutation(int k)
+{
+    if(str[k]){
+        for(int i=k;str[i];i++){
+            cout<<"i="<<i<<" k="<<k<<" str[i]="<<str[i]<<" str[k]="<<str[k]<<endl;
+            swapp(str[i],str[k]);
+            permutation(k+1);
+            swapp(str[i],str[k]);
+        }
+    }
+    else
+        printf("%s\n",str);
+
+}
+
+
+int main()
+{
+    scanf("%s",str);
+    permutation(0);
+}
+
 
 
