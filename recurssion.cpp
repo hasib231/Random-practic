@@ -236,5 +236,43 @@ int main()
     cout<<ans;
 }
 
+//palindrome
+#include<bits/stdc++.h>
+
+using namespace std;
+
+bool palindrome(string str,int first,int last)
+{
+    if(first>=last)
+    {
+        return true;
+    }
+    if(str[first]!=str[last])
+    {
+        return false;
+    }
+
+    return palindrome(str,first+1,last-1);
+}
+
+int main()
+{
+    string str;
+    int first,last;
+    bool b;
+    cin>>str;
+    first=0;
+    last=str.size()-1;
+    b=palindrome(str,first,last);
+    if(b)
+    {
+        cout<<"This string is palindrome"<<endl;
+    }
+    else{
+        cout<<"This string is not palindrome"<<endl;
+    }
+
+}
+
 
 
