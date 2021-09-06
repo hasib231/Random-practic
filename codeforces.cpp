@@ -5,22 +5,22 @@ using namespace std;
 int main()
 {
 
-    int n,i,ct=0,mx,j=0;
-    cin>>n;
-    int arr[n],arr2[n]={0};
-    for(i=0;i<n;i++){
-        cin>>arr[i];
-        arr2[j]+=1;
-        if(arr[i-1]>arr[i]){
-            j++;
+    string str;
+    cin>>str;
+    for(int i=0;str[i];i++){
+        if(i==0){
+            if(str[i]>='a'&&str[i]<='z'){
+                str[i]='A'+str[i]-'a';
+            }
+        }
+        else{
+            if(str[i]>='A'&&str[i]<='Z'){
+                str[i]=str[i]+32;
+            }
         }
     }
-    mx=arr2[0];
-    for(i=1;i<j;i++){
-        if(arr2[i-1]<arr2[i]){
-            mx=arr2[i];
-        }
-    }
-    cout<<mx<<endl;
+    cout<<str<<endl;
+
     return 0;
 }
+
