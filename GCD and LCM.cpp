@@ -1,4 +1,3 @@
-//GCD
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -12,13 +11,21 @@ int GCD(int A,int B)
         return GCD(B,A%B);
     }
 }
+
+int LCM(int a,int b)
+{
+    return a*b/GCD(a,b);
+
+    //return (a/GCD(a,b))*b; //for avoid overflow
+}
 int main()
 {
-    int a,b,ans;
+    int a,b,ans1,ans2;
     cin>>a>>b;
-    ans=GCD(a,b);
+    ans1=GCD(a,b);
+    ans2=LCM(a,b);
     //ans=__gcd(a,b); //GCD STL
-    cout<<ans;
+    cout<<"GCD="<<ans1<<" LCM="<<ans2;
     return 0;
 }
 
